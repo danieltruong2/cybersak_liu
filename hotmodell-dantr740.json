@@ -1,0 +1,1095 @@
+{
+  "summary": {
+    "title": "Exempelsystem i kursen ETE352 Cybersäkerhet - grunder och medvetenhet"
+  },
+  "detail": {
+    "contributors": [
+      "Elmedin Zildzic",
+      "Mikael Asplund"
+    ],
+    "diagrams": [
+      {
+        "title": "Exempelsystem",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "diagramType": "STRIDE",
+        "id": 0,
+        "$$hashKey": "object:14",
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 530,
+                "y": 40
+              },
+              "angle": 0,
+              "id": "b216d5f2-f9ac-44cc-b014-dd67f37614e7",
+              "z": 1,
+              "hasOpenThreats": true,
+              "storesCredentials": true,
+              "isALog": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Denial of service",
+                  "title": "DoS",
+                  "threatId": "d21f5446-8e0b-423c-bbcc-6f8ed30d1ab8",
+                  "$$hashKey": "object:559",
+                  "mitigation": "Hantera ovanlig trafik."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Tampering",
+                  "title": "Tampering",
+                  "threatId": "fff602b7-64ae-4b9c-95c1-d63448db8fed",
+                  "$$hashKey": "object:389"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Repudiation",
+                  "title": "Repudiation",
+                  "mitigation": "Logga alla händelser i databasen.",
+                  "threatId": "a1180158-cd26-4f88-8660-73729a8534f8",
+                  "$$hashKey": "object:573"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Databas"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 840,
+                "y": 40
+              },
+              "angle": 0,
+              "id": "2416816b-0715-46f0-9c2c-6af4ad269c36",
+              "z": 2,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Spoofing",
+                  "title": "Spoofing",
+                  "threatId": "2df8ae1b-3f52-4d04-a81c-3617e505a136",
+                  "$$hashKey": "object:376",
+                  "description": "Någon kan låtsas vara system admin. Kanske kommit åt system admins konton eller enheter.",
+                  "mitigation": "Flerfaktorautentisering. Biometrisk faktor försvårar att någon annan än system admin själv fysiskt kommer åt systemet."
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "title": "Repudiation",
+                  "type": "Repudiation",
+                  "threatId": "15acaec4-dc18-4550-a4bb-dc9705260262",
+                  "$$hashKey": "object:382",
+                  "description": "Om system admin eller någon som låtsas vara system admin gör en attack så måste det gå att spåra hit.",
+                  "mitigation": "Logga allt flöde som kommer från system admin."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Systemadministratör"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 530,
+                "y": 440
+              },
+              "angle": 0,
+              "id": "0227b179-35c2-42f9-ac39-3f0f2cc4ac58",
+              "z": 5,
+              "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Externt",
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "Extern tjänst\n(Skatteverket)"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 89,
+                "y": 168
+              },
+              "angle": 0,
+              "id": "8438e351-6a23-417a-b64d-7af55bf10670",
+              "z": 12,
+              "hasOpenThreats": true,
+              "description": "Autentisering, Access control av externa enheter",
+              "outOfScope": false,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Denial of service",
+                  "title": "DoS",
+                  "threatId": "0dc54674-8a90-4838-895a-5f2f69148e18",
+                  "$$hashKey": "object:504",
+                  "mitigation": "Förbättra trafikhantering"
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "modelType": "STRIDE",
+                  "type": "Elevation of privilege",
+                  "title": "Elevation",
+                  "threatId": "de70a36b-5623-4cf6-b85c-6b6ebbf894c1",
+                  "$$hashKey": "object:494",
+                  "mitigation": "Ska begränsas till vad som får kommas åt."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Molntjänst"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "2416816b-0715-46f0-9c2c-6af4ad269c36"
+              },
+              "target": {
+                "id": "b216d5f2-f9ac-44cc-b014-dd67f37614e7"
+              },
+              "vertices": [],
+              "id": "ce9fa23d-d7c1-4a8b-9cf7-65353bd37bc1",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Hanterar",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 560,
+                "y": 240
+              },
+              "angle": 0,
+              "id": "8884e768-7353-4e0a-ac85-8779e5c912ae",
+              "z": 14,
+              "hasOpenThreats": true,
+              "description": "",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Information disclosure",
+                  "title": "Data leak",
+                  "description": "Skatteverket har hackats eller att någon utger sig vara Skatteverket och begär plötsligt ut all kunddata på en och samma gång.",
+                  "mitigation": "Att detektera en förfrågan på ovanlig stor mängd data på en och samma gång som en anomali och därmed neka för att system admin kan kontakta Skatteverket.",
+                  "threatId": "abc0fb78-5647-407e-a797-456923ac11d4",
+                  "$$hashKey": "object:629"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Denial of service",
+                  "title": "DoS",
+                  "threatId": "16f1901b-7b8d-4fc5-9a45-723b1d0ccd1a",
+                  "$$hashKey": "object:609",
+                  "description": "Knytpunkten blir överbelastad.",
+                  "mitigation": "Se till att kunna hantera mycket på en gång."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Kundhantering"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 880,
+                "y": 240
+              },
+              "angle": 0,
+              "id": "134e6666-bb56-4a4e-bbc9-13061ab81727",
+              "z": 15,
+              "hasOpenThreats": true,
+              "description": "Fakturahantering",
+              "outOfScope": false,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Tampering",
+                  "title": "Tampering",
+                  "description": "Felaktig data kan komma från system admin som i sin tur påverkar kundhanteringen vid synkronisering.",
+                  "mitigation": "Kryptera datan samt ha kod som hanterar uppenbara fel.",
+                  "threatId": "6982eb5a-100f-42da-9e89-d67fe69d5e29",
+                  "$$hashKey": "object:533"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Denial of service",
+                  "title": "DoS",
+                  "description": "System admin kan mata sönder systemet.",
+                  "mitigation": "Hantera ovanlig trafik.",
+                  "threatId": "9258f756-df5d-40ff-bd13-4f43383f1c48",
+                  "$$hashKey": "object:551"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Fakturasystem"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "2416816b-0715-46f0-9c2c-6af4ad269c36"
+              },
+              "target": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "vertices": [],
+              "id": "55461cb2-6cc2-44ad-8ad4-5559f7550fe8",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Hanterar",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "2416816b-0715-46f0-9c2c-6af4ad269c36"
+              },
+              "target": {
+                "id": "134e6666-bb56-4a4e-bbc9-13061ab81727"
+              },
+              "vertices": [],
+              "id": "7057eebc-881b-4b7e-bc00-22be7496303c",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Hanterar",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 17,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "target": {
+                "id": "134e6666-bb56-4a4e-bbc9-13061ab81727"
+              },
+              "vertices": [],
+              "id": "f14cda49-114b-4b3a-834a-2f8f2699d4d6",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 11",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "134e6666-bb56-4a4e-bbc9-13061ab81727"
+              },
+              "target": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "vertices": [],
+              "id": "71813149-729c-41a5-8331-d63a8d14a71c",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Synkroniserar",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 19,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "target": {
+                "id": "8438e351-6a23-417a-b64d-7af55bf10670"
+              },
+              "vertices": [],
+              "id": "7148b861-43e1-484e-ac81-112800b4cf8e",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 22,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "target": {
+                "id": "0227b179-35c2-42f9-ac39-3f0f2cc4ac58"
+              },
+              "vertices": [],
+              "id": "20624fa9-5144-49f2-9ce5-7c343ed6294a",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 23,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 62,
+                "y": 358
+              },
+              "angle": 0,
+              "id": "fd1a81db-67dc-453a-8081-8cd529680112",
+              "z": 24,
+              "hasOpenThreats": true,
+              "description": "Mobil\nDator",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "modelType": "STRIDE",
+                  "type": "Spoofing",
+                  "title": "Spoofing",
+                  "threatId": "501ae005-a1a1-432e-b84d-e3565b4bd7ff",
+                  "$$hashKey": "object:437",
+                  "mitigation": "Flerfaktorsautentisering"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Extern enhet"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 250,
+                "y": 360
+              },
+              "angle": 0,
+              "id": "112d1fee-d583-443c-bc7e-5aaeb03635b9",
+              "z": 25,
+              "hasOpenThreats": true,
+              "description": "Dator",
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Spoofing",
+                  "title": "Spoofing",
+                  "threatId": "4ff52186-8a67-4cf6-84c5-236616d47c1c",
+                  "$$hashKey": "object:364"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Repudiation",
+                  "title": "Repudiation",
+                  "threatId": "72c8b439-ae84-4538-b3f0-ff63cb20d2ba",
+                  "$$hashKey": "object:370"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Kontorsenhet"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "fd1a81db-67dc-453a-8081-8cd529680112"
+              },
+              "target": {
+                "id": "8438e351-6a23-417a-b64d-7af55bf10670"
+              },
+              "vertices": [],
+              "id": "339f36d9-7d18-4258-b23f-61996af9ddaf",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 28,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "112d1fee-d583-443c-bc7e-5aaeb03635b9"
+              },
+              "target": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "vertices": [],
+              "id": "46455c79-171c-4637-a814-709b0f20a223",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 29,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "target": {
+                "id": "b216d5f2-f9ac-44cc-b014-dd67f37614e7"
+              },
+              "vertices": [],
+              "id": "7f2c62f2-2774-4742-abc1-53584adeb105",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 30,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "b216d5f2-f9ac-44cc-b014-dd67f37614e7"
+              },
+              "target": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "vertices": [],
+              "id": "ae67dcdc-8433-4864-8269-db1d9fc11cbc",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Lagrar/Hämtar data",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 31,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 198,
+                "y": 222
+              },
+              "target": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "vertices": [],
+              "id": "5867683b-f1e1-4ccf-adf4-b074392a57dd",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Åtkomst",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 32,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Tampering",
+                  "title": "Tampering MITM",
+                  "threatId": "886c1a8a-c871-4a23-985d-2adecc64317f",
+                  "$$hashKey": "object:450",
+                  "mitigation": "Kryptera trafiken."
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "target": {
+                "id": "112d1fee-d583-443c-bc7e-5aaeb03635b9"
+              },
+              "vertices": [],
+              "id": "1a424cce-f0e5-4308-8fa5-57286ebd55a8",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Åtkomst",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 33,
+              "hasOpenThreats": false,
+              "threats": [],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "id": "8438e351-6a23-417a-b64d-7af55bf10670"
+              },
+              "target": {
+                "id": "fd1a81db-67dc-453a-8081-8cd529680112"
+              },
+              "vertices": [],
+              "id": "e0cd98c6-c2e2-4143-8264-be565c280371",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Autentiserar",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 34,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 609,
+                "y": 436
+              },
+              "target": {
+                "id": "8884e768-7353-4e0a-ac85-8779e5c912ae"
+              },
+              "vertices": [],
+              "id": "8520b61d-c4f2-4dc3-a7b1-829c510560ab",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Kunduppgifter",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 35,
+              "hasOpenThreats": false,
+              "isEncrypted": false,
+              "threats": [],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 84,
+                "y": 284
+              },
+              "target": {
+                "x": 259,
+                "y": 200
+              },
+              "vertices": [
+                {
+                  "x": 182,
+                  "y": 292
+                }
+              ],
+              "id": "9daad412-1353-4fdb-b181-379ddd9562b0",
+              "z": 36,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 706,
+                "y": 345
+              },
+              "target": {
+                "x": 478,
+                "y": 219
+              },
+              "vertices": [
+                {
+                  "x": 578,
+                  "y": 363
+                },
+                {
+                  "x": 494,
+                  "y": 296
+                }
+              ],
+              "id": "b45f447e-ca84-49e6-a287-695f5ca0497a",
+              "z": 37,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 478,
+                "y": 120
+              },
+              "target": {
+                "x": 740,
+                "y": 116
+              },
+              "vertices": [
+                {
+                  "x": 613,
+                  "y": 158
+                }
+              ],
+              "id": "e8ebcf59-0679-4dae-bf1d-3b2e14b4e5d0",
+              "z": 38,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 824,
+                "y": 1
+              },
+              "target": {
+                "x": 988,
+                "y": 152
+              },
+              "vertices": [
+                {
+                  "x": 808,
+                  "y": 147
+                }
+              ],
+              "id": "bae3ee4d-16ca-41fd-aa1d-ebb36dc858ad",
+              "z": 39,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 600,
+          "width": 1105
+        }
+      }
+    ]
+  }
+}
